@@ -1,9 +1,9 @@
-#verison 0.0.1 Altair
-#Version Broot = ta bem confuso ainda, melhorar depois
+#Jogoda velha simples
+#Jogo para dois jogadores
 
 #Title
 print('=-' * 20)
-print('|\tJogo da Velha 0.0.1\t\t|')
+print('Jogo da Velha - Simples')
 print('=-' * 20)
 
 #Variaveis
@@ -27,7 +27,7 @@ while peca != 'x' or peca != 'o':
 
 #Visao tabuleiro
 print('=-' * 16)
-print('|\tTabeuleiro\t  |')
+print('Tabeuleiro')
 print('=-' * 16)
 print('[1\t2\t3]\n[4\t5\t6]\n[7\t8\t9]')
 
@@ -38,6 +38,7 @@ while jogada != 9:
         while True:
             print('Sua Peça: {}'.format(peca))
             casa = int(input('Escolha a casa: '))
+            #Posicionamento da peca
             if casa == primeiro:
                 primeiro = peca
                 break
@@ -76,6 +77,7 @@ while jogada != 9:
                 pecaM == 'X'
             print('Sua Peça: {}'.format(pecaM))
             casa = int(input('Escolha a casa: '))
+            #Posicionamento da peca
             if casa == primeiro:
                 primeiro = pecaInverte
                 break
@@ -105,10 +107,13 @@ while jogada != 9:
                 break
             else:
                 print('Valor escolhido não existe\nEscolha outro!\n')
+    
     #Contador de jogadas validas
     jogada += 1
+    
     #Print resultado da jogada
     print('[{}\t{}\t{}]\n[{}\t{}\t{}]\n[{}\t{}\t{}]'.format(primeiro, segundo, terceiro, quarto, quinto, sexto, setimo, oitavo, nono))
+    
     #Gerador de vitoria
     #X
     if primeiro == 'X' and segundo == 'X' and terceiro == 'X':
@@ -160,6 +165,7 @@ while jogada != 9:
     elif terceiro == 'O' and quinto == 'O' and setimo == 'O':
         V = 2    
         break
+
 #Confirma o vitorioso
 if V == 0:
     print('Empate')
